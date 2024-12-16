@@ -18,15 +18,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   echo "Dados recebidos:<br>";
-  echo "Nome: $nome<br>";
-  echo "E-mail: $email<br>";
-  echo "Senha: $senha<br>";
-  echo "Data de Nascimento: $data_nascimento<br>";
-  echo "Telefone: $telefone<br>";
-  echo "Sexo: $sexo<br>";
-  echo "Cor: $cor<br>";
-  echo "Atividade: " . implode(", ", $atividade) . "<br>";
-  echo "Data e Hora: $data_hora<br>";
+  echo "Nome: $_POST[nome]<br>";
+  echo "E-mail: $_POST[email]<br>";
+  echo "Senha: $_POST[senha]<br>";
+  echo "Data de Nascimento: $_POST[data_nascimento]<br>";
+  echo "Telefone: $_POST[telefone]<br>";
+  echo "Sexo: $_POST[sexo]<br>";
+  echo "Cor: $_POST[cor]<br>";
+  echo "Atividade: " . implode(", ", $_POST[atividade]) . "<br>";
+  echo "Data e Hora: $_POST[data_hora]<br>";
 } else {
   echo "Nenhum dado recebido.";
 }
